@@ -11,7 +11,7 @@ def train_file_list_to_json(english_file_list: List[str], german_file_list: List
     # Preprocess unwanted characters
     def process_file(file):
         if '\\' in file:
-            file = file.replace('\\', '\\')
+            file = file.replace('\\', '\\\\')
         if '/' in file:
             file = file.replace('/', '\\/')
         if '"' in file:
